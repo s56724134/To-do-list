@@ -1,0 +1,11 @@
+{% extends "tasks/main.html" %}
+{% block content %}
+	<h3>Register</h3>
+	<div class="card-body">		
+		<form method="POST" action="{% url 'registeruser' %}">
+			{% csrf_token %}
+			{{form.as_p}}
+			<input class="btn btn-primary" type="submit" value="submit">
+		</form>
+	</div>
+{% endblock %}
