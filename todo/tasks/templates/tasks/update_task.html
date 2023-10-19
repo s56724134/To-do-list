@@ -1,7 +1,11 @@
+{% extends "tasks/main.html" %}
+{% block content %}
 <h3>Update Task</h3>
-
-<form method="POST" action="">
-	{% csrf_token %}
-	{{form}}
-	<input type="submit" name="Update Task">
-</form>
+	<div class="card-body">		
+		<form class="card-body-update" method="POST" action="">
+			{% csrf_token %}
+			{{form.as_p}}
+			<input class="btn btn-primary" type="submit" value="submit">
+		</form>
+	</div>	
+{% endblock %}
