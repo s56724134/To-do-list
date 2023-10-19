@@ -1,0 +1,22 @@
+{% extends "tasks/main.html" %}
+
+{% block content%}
+	<form class='login' action="{% url 'loginpage' %}" method="POST">
+		{% csrf_token %}
+		<div class="login-username" >
+			<span>Username:</span>
+			<input type="text" name="username" placeholder="Username" >
+		</div>
+		<div class="login-password">
+			<span>Password:</span>
+			<input type="password" name="password" placeholder="Password">
+		</div>
+		<input class="btn btn-primary" type="submit" value="Login">
+		<div class="login-info">
+			<p>Don't have an account? <a href="{% url 'registeruser' %}">Register</a></p>
+			{% if message %}
+			<p>{{message}}</p>
+			{% endif %}
+		</div>
+	</form>
+{% endblock %}
