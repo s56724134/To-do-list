@@ -32,6 +32,9 @@ input.title{
 	border-radius: 3px;
 	color: #fff;
 }
+.item-row a:first-child{
+	margin: -1px 0 0 ;
+}
 .btn-warning{
 	background-color: #ffae19;
 	border-color: #e59400;
@@ -51,3 +54,25 @@ input.id_complete{
 
 
 /* login */
+.login-username,.login-password,.login-info{
+	display: flex;
+	align-items: center;
+}
+.login-username span{
+	margin-right: 20px;
+}
+.login-password span{
+	margin-right: 25px
+}
+.login-info{
+	justify-content: space-between;
+}
+.logout{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+}
+.card-body-update p:last-child{
+	display: flex;
+}
